@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>월리를 찾아라</title>
+	<style type="text/css">
+		body, header, section, p,img{margin: 0; padding: 0;}
+		header{height: 200px; margin: auto;}
+		body{background: pink;}
+		.pis{position: absolute; width: 50px; right: 50%; bottom: 50%; animation: ro 1s linear alternate infinite; opacity: 1;}
+		#wal{opacity: 1;}
+		
+		#start{position: absolute; left: 50px; top: 50px;
+				z-index: 10000;}
+		#start:hover{width: 350px;}
+		#takk{position: absolute; left: 320px; top: 27px;
+				z-index: 10000;}
+
+		h1{position: absolute; left: 350px; top: 30px; z-index: 10000;}
+
+		@keyframes ro { 
+				to {transform: translateY(10%);}
+			}
+
+	</style>
+</head>
+<body id="mybody">
+
+	<img src="rally.png" class="pis" id="ral">
+	<img src="waldo.png" class="pis" id="wald">
+	<img src="wally.png" class="pis" id="wal">
+	<img src="willy.png" class="pis" id="will">
+	<img src="bally.png" class="pis" id="bal">
+	<img src="wizard.png" class="pis" id="wiz">
+	<img src="willma.png" class="pis" id="wm">
+	<img src="willy2.png" class="pis" id="will2">
+
+	<img src="tak.png" id="takk">
+	<img src="bigwally.png" id="start">
+	<h1>나를 찾아줘!</h1>
+	
+	<audio id="bgmm" loop>
+	  <source src="bgm.mp3" type="audio/mpeg">
+	</audio>
+	<audio id="yee">
+	  <source src="yeah.mp3" type="audio/mpeg">
+	</audio>
+	<audio id="no">
+	  <source src="wrong.mp3" type="audio/mpeg">
+	</audio>
+	
+	<script type="text/javascript">
+
+			var  astate = "off";
+		start.onclick = function(){
+			if (astate == "off") {
+				bgmm.play(); astate="on";
+			}else{bgmm.pause(); astate="off";
+			
+			}
+		}
+
+		no.volume = 0.3;
+			for(var i = 0; i<30; i++){
+			var a = ral.cloneNode(true);
+			a.id = i;
+			a.style.right = Math.random()*650 + "px";
+			a.style.top = Math.random()*550 + "px";
+			a.style.animationDelay = i + "s";
+				a.onclick = function(){
+				no.play();
+				}
+			document.body.appendChild(a);
+		}
+
+		for(var i = 0; i<30; i++){
+			var b = bal.cloneNode(true);
+			b.id = i;
+			b.style.right = Math.random()*650 + "px";
+			b.style.top = Math.random()*550 + "px";
+			b.style.animationDelay = i + "s";
+				b.onclick = function(){
+				no.play();
+				}
+			document.body.appendChild(b);
+		}
+
+		for(var i = 0; i<30; i++){
+			var c = wald.cloneNode(true);
+			c.id = i;
+			c.style.right = Math.random()*650 + "px";
+			c.style.top = Math.random()*550 + "px";
+			c.style.animationDelay = i + "s";
+				c.onclick = function(){
+				no.play();
+				}
+			document.body.appendChild(c);
+		}
+
+		for(var i = 0; i<8; i++){
+			var d = wm.cloneNode(true);
+			d.id = i;
+			d.style.right = Math.random()*650 + "px";
+			d.style.top = Math.random()*550 + "px";
+			d.style.animationDelay = i + "s";
+				d.onclick = function(){
+				no.play();
+				}
+			document.body.appendChild(d);
+		}
+
+			for(var i = 0; i<10; i++){
+			var e = wiz.cloneNode(true);
+			e.id = i;
+			e.style.right = Math.random()*650 + "px";
+			e.style.top = Math.random()*550 + "px";
+			e.style.animationDelay = i + "s";
+				e.onclick = function(){
+				no.play();
+				}
+			document.body.appendChild(e);
+		}
+
+		for(var i = 0; i<15; i++){
+			var f = will.cloneNode(true);
+			f.id = i;
+			f.style.right = Math.random()*650 + "px";
+			f.style.top = Math.random()*550 + "px";
+			f.style.animationDelay = i + "s";
+				f.onclick = function(){
+				no.play();
+				}
+			document.body.appendChild(f)
+		}
+
+			for(var i = 0; i<30; i++){
+			var g = will2.cloneNode(true);
+			g.id = i;
+			g.style.right = Math.random()*650 + "px";
+			g.style.top = Math.random()*550 + "px";
+			g.style.animationDelay = i + "s";
+			g.onclick = function(){
+				no.play();
+				}
+			document.body.appendChild(g);
+		}
+
+			for(var i = 0; i<1; i++){
+				var hh = wal.cloneNode(true);
+				hh.id = i;
+				hh.style.right = Math.random()*650 + "px";
+				hh.style.top = Math.random()*500 + "px";
+				hh.style.animationDelay = i + "s";
+				
+				document.body.appendChild(hh);
+			}
+
+		var  estate = "off";
+		hh.onclick = function(){
+			if (estate == "off"){
+				yee.play();
+				mybody.style.background = "blue";
+			}else{mybody.style.background = "";
+			}
+		}
+	
+	</script>
+</body>
+</html>
